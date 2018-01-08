@@ -159,23 +159,39 @@ module.exports = {
     getTickets: function (req, res) {
         var queryAllUserTicket = UserTicket.find();
 
-        if (req.query.userId != undefined || req.query.userId != null) {
-            queryAllUserTicket.where({ 'created_by': req.query.userId });
+         if ((req.query.ticketId != undefined || req.query.ticketId != null) && (req.query.ticketId.length > 0)) {
+             queryAllUserTicket.where({ 'id': req.query.ticketId });
+         }
+ 
+         if ((req.query.userId != undefined || req.query.userId != null) && (req.query.userId.length > 0)) {
+             queryAllUserTicket.where( { 'created_by': req.query.userId });
+         }
+ 
+         if ((req.query.ticketStatus != undefined || req.query.ticketStatus != null) && (req.query.ticketStatus.length > 0)) {
+             queryAllUserTicket.where({ 'status': req.query.ticketStatus });
+         }
+ 
+         if ((req.query.ticketSeverity != undefined || req.query.ticketSeverity != null) && (req.query.ticketSeverity.length > 0)) {
+             queryAllUserTicket.where({ 'severity': req.query.ticketSeverity });
+         }
+ 
+         if ((req.query.ticketPriority != undefined || req.query.ticketPriority != null) && (req.query.ticketPriority.length > 0)) {
+             queryAllUserTicket.where({ 'priority': req.query.ticketPriority });
+         } 
+
+    /**    queryConditions = '';
+
+        if ((req.query.userId.value) && (req.query.userId != undefined || req.query.userId != null)) {
+            console.log("Inside all condition");
+
+            queryConditions = queryConditions + "{'created_by' :" + req.query.userId;
         }
 
-        if (req.query.ticketStatus != undefined || req.query.ticketStatus != null) {
-            queryAllUserTicket.where({ 'status': req.query.ticketStatus });
+        if ((req.query.ticketStatus.value) && (req.query.ticketStatus != undefined || req.query.ticketStatus != null)) {
+            queryConditions = queryConditions + "},'status' :" + req.query.ticketStatus + "}";
         }
-
-
-        if (req.query.ticketSeverity != undefined || req.query.ticketSeverity != null) {
-            queryAllUserTicket.where({ 'severity': req.query.ticketSeverity });
-        }
-
-        if (req.query.ticketPriority != undefined || req.query.ticketPriority != null) {
-            queryAllUserTicket.where({ 'priority': req.query.ticketPriority });
-        }
-
+        console.log("queryConditions--==>" + queryConditions);
+        queryAllUserTicket.where(queryConditions); **/
 
         queryAllUserTicket.sort('priority ASC');
         queryAllUserTicket.sort('severity ASC');
