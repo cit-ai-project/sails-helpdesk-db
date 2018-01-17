@@ -1,10 +1,13 @@
 
+UserRole.create({role_:1, role_name:'Admin',role_short_desc:'Admin activities',role_long_desc:'Admin activities'}).exec(console.log)
+UserRole.create({role_:2, role_name:'User',role_short_desc:'Chat User',role_long_desc:'Chat User'}).exec(console.log)
 
-User.create({user_id:'S8888', user_name:'Shan',user_email:'shan@gmail.com',first_name:'Shunmugam',last_name:'Ramanathan'}).exec(console.log)
-User.create({user_id:'C2508',user_name:'Clement', user_email:'clement@gmail.com',first_name:'Clement',last_name:'Rajesh'}).exec(console.log)
-User.create({user_id:'M2502',user_name:'Mani', user_email:'mani@gmail.com',first_name:'Mani',last_name:'kandan'}).exec(console.log)
-User.create({user_id:'R2527',user_name:'Ram', user_email:'ram@gmail.com',first_name:'Rama',last_name:'Nathan'}).exec(console.log)
-User.create({user_id:'V2528',user_name:'Vijay', user_email:'vijo@gmail.com',first_name:'VIjay',last_name:'Vijo'}).exec(console.log)
+
+User.create({user_id:'S8888', user_name:'Shan',user_email:'shan@gmail.com',user_role:1,first_name:'Shunmugam',last_name:'Ramanathan'}).exec(console.log)
+User.create({user_id:'C2508',user_name:'Clement', user_email:'clement@gmail.com',user_role:2,first_name:'Clement',last_name:'Rajesh'}).exec(console.log)
+User.create({user_id:'M2502',user_name:'Mani', user_email:'mani@gmail.com',user_role:1,first_name:'Mani',last_name:'kandan'}).exec(console.log)
+User.create({user_id:'R2527',user_name:'Ram', user_email:'ram@gmail.com',user_role:2,first_name:'Rama',last_name:'Nathan'}).exec(console.log)
+User.create({user_id:'V2528',user_name:'Vijay', user_email:'vijo@gmail.com',user_role:1,first_name:'VIjay',last_name:'Vijo'}).exec(console.log)
 
 
 Asset.create({asset_id: 'shan-lp', asset_name: 'shan-lp', asset_type: 'laptop', assigned_to : 'S8888', asset_desc:'assigned to shan'}).exec(console.log)
@@ -62,5 +65,7 @@ Get Tickets				: 		http://192.168.61.153:1337/api/helpdesk/userTicket/getTickets
 
 Validate Asset 		:		http://192.168.61.153:1337/api/helpdesk/asset/validateAsset?assetId=ram-lp&userId=R2527
 Get Asset By User	: 		http://192.168.61.153:1337/api/helpdesk/asset/getAssetByUser?userId=R2527
+
+Validate Admin		:		http://192.168.61.153:1337/api/helpdesk/user/validateIsAdmin?userId=R2527
 
 

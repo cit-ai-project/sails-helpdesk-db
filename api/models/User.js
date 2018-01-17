@@ -15,6 +15,9 @@ module.exports = {
      },
     user_name: 'string',
     user_email: 'string',
+    user_role : {
+      model : 'userRole'
+    },
     first_name: 'string',
     last_name: 'string',
     DOB: 'date'
