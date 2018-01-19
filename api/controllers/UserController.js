@@ -11,15 +11,16 @@ module.exports = {
     //Validate Asset
     validateIsAdmin: function (req, res) {
         var queryAllUser = User.find();
-        queryAllUser.where({ 'user_id': req.query.userId, 'user_role': 1 });
+        queryAllUser.where({ 'user_name': req.query.userName, 'user_role': 1 });
+
         queryAllUser.exec(function callBack(err, results) {
             if (err) {
                 return res.json({ 'success': false, 'message': err });
             }
             if (Object.keys(results).length == 0) {
-                return res.json({ 'success': false, 'message': 'Given UserId is not an Admin' });
+                return res.json({ 'success': false, 'message': 'Given UserName is not an Admin' });
             }
-            res.json({ 'success': true, 'message': 'Given UserId is an Admin', results });
+            res.json({ 'success': true, 'message': 'Given UserName is an Admin', results });
         });
     },
 

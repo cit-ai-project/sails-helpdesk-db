@@ -66,6 +66,7 @@ Get Tickets				: 		http://192.168.61.153:1337/api/helpdesk/userTicket/getTickets
 Validate Asset 		:		http://192.168.61.153:1337/api/helpdesk/asset/validateAsset?assetId=ram-lp&userId=R2527
 Get Asset By User	: 		http://192.168.61.153:1337/api/helpdesk/asset/getAssetByUser?userId=R2527
 
-Validate Admin		:		http://192.168.61.153:1337/api/helpdesk/user/validateIsAdmin?userId=R2527
+Validate Admin		:		http://192.168.61.153:1337/api/helpdesk/user/validateIsAdmin?userName=Clement
+							http://192.168.60.222:1337/api/helpdesk/user/validateIsAdmin?userId=S8888
 
 
