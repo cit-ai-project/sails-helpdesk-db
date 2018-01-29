@@ -28,9 +28,9 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-//  localDiskDb: {
-//    adapter: 'sails-disk'
- // },
+  //  localDiskDb: {
+  //    adapter: 'sails-disk'
+  // },
 
   /***************************************************************************
   *                                                                          *
@@ -40,13 +40,24 @@ module.exports.connections = {
   * Run: npm install sails-mysql                                             *
   *                                                                          *
   ***************************************************************************/
-   mysqllocaldb: {
+  /** mysqllocaldb: {
      adapter: 'sails-mysql',
-     host: 'helpdeskbot-sailsdb.mysql.database.azure.com',
-     user: 'adminuser@helpdeskbot-sailsdb', //optional
-     password: 'Welcome1$', //optional
-     database: 'helpdeskbot-sailsdb' //optional
-   },
+     host: 'localhost',
+     user: 'root', //optional
+     password: 'root', //optional
+     database: 'helpdesk' //optional
+   }, **/
+
+
+  mysqllocaldb: {
+    adapter: 'sails-mysql',
+    host: 'helpdeskbot-sailsdb.mysql.database.azure.com',
+    user: 'adminuser@helpdeskbot-sailsdb', //optional
+    password: 'Welcome1$', //optional
+    database: 'helpdeskbot-sailsdb',//optional
+    insecureAuth: true
+  },
+
 
   /***************************************************************************
   *                                                                          *
