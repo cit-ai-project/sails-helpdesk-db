@@ -55,8 +55,11 @@ module.exports.connections = {
     user: 'adminuser@helpdeskbot-sailsdb', //optional
     password: 'Welcome1$', //optional
     database: 'helpdeskbot-sailsdb',//optional
-    schema: 'sailsdb',
-    insecureAuth: true
+    schema : 'sailsdb',
+    //insecureAuth: true,
+    ssl: {
+      ca: fs.readFileSync('./config/BaltimoreCyberTrustRoot.crt'),
+    }
   },
 
 
