@@ -52,7 +52,7 @@ module.exports.connections = {
   mysqllocaldb: {
     adapter: 'sails-mysql',
     host: 'helpdeskbot-sailsdb.mysql.database.azure.com',
-    user: 'adminuser@helpdeskbot-sailsdb', //optional
+    user: 'adminuser@sailsdb', //optional
     password: 'Welcome1$', //optional
     database: 'helpdeskbot-sailsdb',//optional
     insecureAuth: true
