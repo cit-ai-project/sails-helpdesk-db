@@ -25,7 +25,9 @@
     "sails-disk": "~0.10.9",
     "sails-mysql": "^0.11.5",
     "sails-swagger": "^0.51.0",
+    "knex": "^0.13.0",
     "mysql": "git://github.com/mysqljs/mysql#e3e123e9af7c0829a6c1417d911572a75b4a5f95"
+    
   },
   "scripts": {
     "debug": "node debug app.js",
