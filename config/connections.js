@@ -54,7 +54,7 @@ module.exports.connections = {
     host: 'helpdeskbot-sailsdb.mysql.database.azure.com',
     user: 'adminuser@sailsdb', //optional
     password: 'Welcome1$', //optional
-    database: 'helpdeskbot-sailsdb',//optional
+    database: 'sailsdb',//optional
     insecureAuth: true
   },
 
