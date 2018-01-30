@@ -55,7 +55,7 @@ module.exports.connections = {
     user: 'adminuser@helpdeskbot-sailsdb', //optional
     password: 'Welcome1$', //optional
     database: 'sailsdb',//optional
-    insecureAuth: true
+    insecureAuth: false
   },
 
 
