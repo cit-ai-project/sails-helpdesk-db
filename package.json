@@ -24,10 +24,14 @@
     "sails-custom-swagger-hook": "^1.0.3",
     "sails-disk": "~0.10.9",
     "sails-mysql": "^0.11.5",
+<<<<<<< HEAD
     "sails-swagger": "^0.51.0",
     "knex": "latest",
     "mysql": "git://github.com/mysqljs/mysql#e3e123e9af7c0829a6c1417d911572a75b4a5f95"
     
+=======
+    "sails-swagger": "^0.51.0"
+>>>>>>> parent of e7d50a0... Changes for azure mysql connection issue
   },
   "scripts": {
     "debug": "node debug app.js",
