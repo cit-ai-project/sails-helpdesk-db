@@ -5,6 +5,8 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "bignumber.js": "^6.0.0",
+    "buffer-shims": "^1.0.0",
     "ejs": "2.3.4",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
@@ -25,7 +27,7 @@
     "sails-disk": "~0.10.9",
     "sails-mysql": "^0.11.5",
     "sails-swagger": "^0.51.0",
-    "mysql": "git://github.com/mysqljs/mysql#e3e123e9af7c0829a6c1417d911572a75b4a5f95"
+    "sqlstring": "^2.3.0"
   },
   "scripts": {
     "debug": "node debug app.js",
